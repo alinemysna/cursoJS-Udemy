@@ -6,7 +6,12 @@
 * % resto da divisão
 */
 
-const num1 = 10
-const num2 = 3 
+/* 
+incremento = ++
+decremento = --
+*/
 
-console.log(num1 % num2)
+// NaN - Not a Namber parseInt (inteiro), parseFloat (decimais)
+
+
+
