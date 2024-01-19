@@ -8,7 +8,7 @@ function criaCalculadora() {
         },
 
         pressionaEnter() {
-            this.display.addEventListener('keyup', e => {
+            this.display.addEventListener('key', e => {
             if (e.keyCode === 13) {
                 this.realizaConta();
             }
