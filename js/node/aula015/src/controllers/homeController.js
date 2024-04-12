@@ -1,6 +1,5 @@
 exports.paginaInicial = (req, res) => {
-
-    console.log(req.flash('error')), req.flash('succees'), req.flash('info');
+    console.log(req.flash('error'), req.flash('success'), req.flash('info'));
     res.render('index');
     return;
 };
