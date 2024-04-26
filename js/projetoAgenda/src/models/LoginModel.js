@@ -26,7 +26,7 @@ class Login {
 
 
         const salt = bcryptjs.genSaltSync();
-            this.body.password = bcryptjs.hashSync(this.body.passyword, salt);
+            this.body.password = bcryptjs.hashSync(this.body.password, salt);
         
         try {
             this.user = await LoginModel.create(this.body);
@@ -35,7 +35,7 @@ class Login {
         }
     }
 
-    async userExister() {
+    async userExists() {
             const user = await LoginModel.findOne({ email: this.body.email });
             if(user) this.errors.push('Usuário já existe.');
     }
