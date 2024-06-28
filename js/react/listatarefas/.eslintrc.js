@@ -15,7 +15,7 @@ module.exports = {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
   },
-  parser: '@babel/eslint-parser',
+  parser: '@babel/eslint',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -23,13 +23,17 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: ['react', 'prettier', 'react-hooks'],
+  plugins: [
+    'react', 'prettier', 'eslint-plugin-prettier',
+  ],
   settings: {
     react: {
       version: 'detect',
     },
   },
   rules: {
+    "react/jsx-filename-extension": 0,
     'react/react-in-jsx-scope': 'off',
+    "react/state-in-constructor": 0
   },
 };
